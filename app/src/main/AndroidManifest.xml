@@ -11,22 +11,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".LoginActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize">
+        <activity
+            android:name=".LoginActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity
+            android:name=".UserActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ChatActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/AppTheme" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".UserActivity"
-            android:theme="@style/AppTheme"
-            android:configChanges="orientation|keyboardHidden|screenSize"/>
-        <activity android:name=".ChatActivity"
-            android:theme="@style/AppTheme"
-            android:parentActivityName=".UserActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"/>
     </application>
 
 </manifest>

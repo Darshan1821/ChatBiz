@@ -52,11 +52,11 @@ class LoginActivity : AppCompatActivity() {
                         this@LoginActivity.runOnUiThread { dialog.dismiss() }
                         val user = Gson().fromJson<UserData>(response.responseMessage, UserData::class.java)
 
-                        var chatIntent = Intent(this, UserActivity::class.java)
-                        chatIntent.putExtra("id",user.id)
-                        chatIntent.putExtra("name",user.name)
-                        chatIntent.putExtra("token",user.token)
-                        startActivity(chatIntent)
+                        var userIntent = Intent(this, UserActivity::class.java)
+                        userIntent.putExtra("id",user.id)
+                        userIntent.putExtra("name",user.name)
+                        userIntent.putExtra("token",user.token)
+                        startActivity(userIntent)
                         finish()
                     }
                     else -> {

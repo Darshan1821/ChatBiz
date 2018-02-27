@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="5dp">
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/exo"
+        android:padding="5dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/messageData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/exo"
+        android:padding="5dp"
+        android:background="@drawable/message_border"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+        <TextView
+            android:id="@+id/dateStamp"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:padding="5dp"
+            android:fontFamily="@font/exo"
+            android:layout_height="wrap_content"
+            android:textColor="@color/light_grey"
+            android:textAlignment="viewStart"/>
+        <TextView
+            android:id="@+id/timeStamp"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:padding="5dp"
+            android:fontFamily="@font/exo"
+            android:layout_height="wrap_content"
+            android:textColor="@color/light_grey"
+            android:textAlignment="viewEnd"/>
+    </LinearLayout>
+
+</LinearLayout>

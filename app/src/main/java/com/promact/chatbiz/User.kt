@@ -1,8 +1,5 @@
 package com.promact.chatbiz
 
-/**
- * Created by darshan on 27-02-2018.
- */
 class User {
     var id: Int = 0
     var name: String = ""

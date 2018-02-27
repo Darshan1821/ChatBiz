@@ -1,6 +1,8 @@
 package com.promact.chatbiz
 
+import android.app.Activity
 import android.app.AlertDialog
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -28,7 +30,13 @@ class UserActivity : AppCompatActivity() {
         userList.setOnItemClickListener {
             adapterView, view, position, id ->
 
-
+            var chatIntent = Intent(applicationContext, ChatActivity::class.java)
+            chatIntent.putExtra("senderId", userBundle.getInt("id"))
+            chatIntent.putExtra("senderName", userBundle.getString("name"))
+            chatIntent.putExtra("receiverId", usersList[position].id)
+            chatIntent.putExtra("receiverName", usersList[position].name)
+            chatIntent.putExtra("token", userBundle.getString("token"))
+            startActivity(chatIntent)
         }
     }
 

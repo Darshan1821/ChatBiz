@@ -2,4 +2,5 @@
     <string name="app_name">ChatBiz</string>
     <string name="user_name_hint">User Name</string>
     <string name="login_label">Login</string>
+    <string name="message_hint">Enter Message...</string>
 </resources>

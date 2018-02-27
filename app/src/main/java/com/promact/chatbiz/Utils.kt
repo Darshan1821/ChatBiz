@@ -2,7 +2,9 @@ package com.promact.chatbiz
 
 import android.app.AlertDialog
 import android.content.Context
+import android.os.IBinder
 import android.view.LayoutInflater
+import android.view.inputmethod.InputMethodManager
 import android.widget.TextView
 
 class Utils {
@@ -17,5 +19,10 @@ class Utils {
         builder.setCancelable(false)
 
         return builder.create()
+    }
+
+    fun hideKeyboard(systemService: InputMethodManager, token: IBinder) {
+        val inputManager: InputMethodManager = systemService
+        inputManager.hideSoftInputFromWindow(token, InputMethodManager.SHOW_FORCED)
     }
 }
